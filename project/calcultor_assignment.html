@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calculator</title>
+	<style type="text/css">
+		div
+		{
+			height: 280px;
+			width: 200px;
+			background-color:gray;
+			border: 5px solid black;
+			margin: 100px auto;
+			
+				
+		}
+		#input1
+		{
+			height: 30%;
+			width: 100%;
+			text-align: left;
+			background-color: pink;
+
+		}
+		
+		input
+		{
+			height: 35px;
+			width: 45px;
+			font-size: 20px;
+			font-weight: bold;
+			border: 2px solid;
+			border-radius: 10px;
+
+		}
+		#input2
+		{
+			height: 15%;
+			width: 100%;
+
+		}
+	
+	</style>
+	<script type="text/javascript">
+		function fun2(num)
+		{
+			var display=document.getElementById("input1");
+			display.value+=num;
+		}
+	function result()
+	{
+		var display=document.getElementById("input1");
+			display.value=eval(display.value)
+	}
+	function clearResult()
+	{
+		var display=document.getElementById("input1");
+	   display.value="";
+
+	}
+	</script>
+</head>
+<body bgcolor="black">
+	<div>
+<input id="input1" type="button" name="display" onclick="fun2()" value="">
+<table class="table1">
+	<tr>
+<td><input type="button" name="7" onclick="fun2(7)" value="7"></td>
+<td><input type="button" name="8" onclick="fun2(8)" value="8"></td>
+<td><input type="button" name="9" onclick="fun2(9)" value="9"></td>
+<td><input type="button" name="÷" style="background-color: yellow;" onclick="fun2('/')" value="÷"></td>
+
+
+
+</tr>
+<tr>
+<td><input type="button" name="4" onclick="fun2(4)" value="4"></td>
+<td><input type="button" name="5" onclick="fun2(5)" value="5"></td>
+<td><input type="button" name="6" onclick="fun2(6)" value="6"></td>
+<td><input type="button" name="×" style="background-color:yellow;" onclick="fun2('*')" value="×"></td>
+
+
+</tr>
+<tr>
+<td><input type="button" name="1" onclick="fun2(1)" value="1"></td>
+<td><input type="button" name="2" onclick="fun2(2)" value="2"></td>
+<td><input type="button" name="3" onclick="fun2(3)" value="3"></td>
+<td><input type="button" name="-" style="background-color:yellow;" onclick="fun2(-)" value="-"></td>
+</tr>
+<tr>
+<td><input type="button" name="0" onclick="fun2(0)" value="0"></td>
+<td><input type="button" name="." style="background-color:yellow;" onclick="fun2(.)" value="."></td>
+<td><input type="button" name="+"  style="background-color:yellow;"onclick="fun2('+')" value="+"></td>
+<td><input type="button" name="="  style="background-color:yellow;"onclick="result('=')" value="="></td>
+</tr>
+<tr><td><input id="input2" type="button" name="C"  style="background-color:yellow"onclick="clearResult('C')" value="C">
+</tr>
+</table>
+</div>
+</body>
+</html>
